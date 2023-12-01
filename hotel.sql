@@ -6,12 +6,12 @@ USE `hotel`;
 CREATE TABLE `station` (
 	`sta_id` INT NOT NULL AUTO_INCREMENT,
 	`sta_nom` VARCHAR(50) NOT NULL,
-	`sta_altitude` INT,
+	`sta_altitude` INT NOT NULL,
 	 PRIMARY KEY(`sta_id`)
 );
 
 CREATE TABLE `hotel` (
-	`hot_id` 			INT AUTO_INCREMENT NOT NULL,
+	`hot_id` 			INT NOT NULL AUTO_INCREMENT ,
 	`hot_sta_id` 		INT NOT NULL,
 	`hot_nom`		VARCHAR(50) NOT NULL,
 	`hot_categorie`	INT NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE `hotel` (
 );
 
 CREATE TABLE `chambre` (
-	`cha_id`INT NOT NULL AUTO_INCREMENT ,
+	`cha_id` INT NOT NULL AUTO_INCREMENT ,
 	`cha_hot_id` INT NOT NULL,
 	`cha_numero` INT NOT NULL,
 	`cha_capacite` INT NOT NULL,
