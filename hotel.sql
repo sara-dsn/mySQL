@@ -12,8 +12,8 @@ CREATE TABLE `station` (
 CREATE TABLE `hotel` (
 	`hot_id` 			INT AUTO_INCREMENT NOT NULL,
 	`hot_sta_id` 		INT NOT NULL,
-	`hot_nom `		VARCHAR(50) NOT NULL,
-	`hot_categorie `	INT NOT NULL,
+	`hot_nom`		VARCHAR(50) NOT NULL,
+	`hot_categorie`	INT NOT NULL,
 	`hot_adresse`		VARCHAR(50) NOT NULL,
 	`hot_ville` 		VARCHAR(50) NOT NULL, 
 	FOREIGN KEY (`hot_sta_id`) REFERENCES `station`(`sta_id`),
@@ -22,7 +22,7 @@ CREATE TABLE `hotel` (
 
 CREATE TABLE `chambre` (
 	`cha_id`INT NOT NULL AUTO_INCREMENT ,
-	`cha_hot_id` ̀INT NOT NULL,
+	`cha_hot_id` INT NOT NULL,
 	`cha_numero` INT NOT NULL,
 	`cha_capacite` INT NOT NULL,
 	`cha_type` INT NOT NULL,
