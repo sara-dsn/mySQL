@@ -27,12 +27,12 @@ CREATE TABLE `chambre` (
 	`cha_numero` INT NOT NULL,
 	`cha_capacite` INT NOT NULL,
 	`cha_type` INT NOT NULL,
-	FOREIGN KEY (`cha_hot_id)` REFERENCES `hotel`(`hot_id`),
+	FOREIGN KEY (`cha_hot_id`) REFERENCES `hotel`(`hot_id`),
 	PRIMARY KEY (`cha_id`)
 );
 
 CREATE TABLE `client` (
-	`cli_id `INT NOT NULL AUTO_INCREMENT ,
+	`cli_id ` INT NOT NULL AUTO_INCREMENT ,
 	`cli_nom` VARCHAR(50),
 	`cli_prenom` VARCHAR(50),
 	`cli_adresse` VARCHAR(50),
