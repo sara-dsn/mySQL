@@ -4,9 +4,10 @@ CREATE DATABASE `hotel`;
 USE `hotel`;
 
 CREATE TABLE `station` (
-	`sta_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`sta_id` INT NOT NULL AUTO_INCREMENT,
 	`sta_nom` VARCHAR(50) NOT NULL,
-	`sta_altitude` INT
+	`sta_altitude` INT,
+	 PRIMARY KEY(`sta_id`)
 );
 
 CREATE TABLE `hotel` (
