@@ -37,6 +37,7 @@ CREATE TABLE `client` (
 	`cli_prenom` VARCHAR(50),
 	`cli_adresse` VARCHAR(50),
 	`cli_ville` VARCHAR(50),
+	FOREIGN KEY (`cli_id`) REFERENCES `chambre`(`cha_id`),
 	PRIMARY KEY (`cli_id`)
 );
 
