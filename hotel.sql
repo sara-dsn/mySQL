@@ -32,12 +32,11 @@ CREATE TABLE `chambre` (
 );
 
 CREATE TABLE `client` (
-	`cli_id ` INT NOT NULL AUTO_INCREMENT ,
+	`cli_id` INT NOT NULL AUTO_INCREMENT ,
 	`cli_nom` VARCHAR(50),
 	`cli_prenom` VARCHAR(50),
 	`cli_adresse` VARCHAR(50),
 	`cli_ville` VARCHAR(50),
-	FOREIGN KEY (`cli_id`) REFERENCES `chambre`(`cha_id`),
 	PRIMARY KEY (`cli_id`)
 );
 
@@ -47,10 +46,10 @@ CREATE TABLE `reservation` (
 	`res_cli_id` INT NOT NULL ,
 	`res_date` DATETIME NOT NULL,
 	`res_date_debut` DATETIME NOT NULL,
-	`res_date_fin `DATETIME NOT NULL,
+	`res_date_fin`DATETIME NOT NULL,
 	`res_prix` DECIMAL(6,2) NOT NULL,
 	`res_arrhes` DECIMAL(6,2),
 	FOREIGN KEY (`res_cha_id`) REFERENCES `chambre`(`cha_id`),
-	FOREIGN KEY (`res_cli_id`) REFERENCES client(`cli_id)`,
+	FOREIGN KEY (`res_cli_id`) REFERENCES `client`(`cli_id`),
 	PRIMARY KEY (`res_id`)
 );
