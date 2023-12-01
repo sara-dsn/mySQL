@@ -1,4 +1,6 @@
-"sta_id","sta_nom","sta_altitude"
-"1","La Montagne","2500"
-"2","Le Sud","200"
-"3","La Plage","10"
+-- Active: 1679985753310@@127.0.0.1@3306@hotel
+
+INSERT INTO `station` (`sta_id`, `sta_nom`, `sta_altitude`) VALUES
+(1, 'La Montagne', 2500),
+(2, 'Le Sud', 200),
+(3, 'La Plage', 10);
